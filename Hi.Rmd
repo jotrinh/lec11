@@ -8,7 +8,17 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 
 ```{r}
-plot(1
-     )
+library(bio3d)
+# Download some example PDB files
+ids <- c("1TND_B","1AGR_A","1TAG_A","1GG2_A","1KJY_A","4G5Q_A")
+files <- get.pdb(ids, split = TRUE)
+```
+
+```{r}
+# Extract and align the chains we are interested in
+pdbs <- pdbaln(files, fit = TRUE)
+
+# Print to screen a summary of the 'pdbs' object
+pdbs
 ```
 

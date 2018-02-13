@@ -8,6 +8,6 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 
 ```{r}
-
+plot(1)
 ```
 
